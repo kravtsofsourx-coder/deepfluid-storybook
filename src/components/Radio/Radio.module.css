@@ -1,0 +1,58 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-8);
+  cursor: pointer;
+  font-size: var(--text-body-medium-size);
+  color: var(--text-primary);
+}
+
+.disabled { cursor: not-allowed; opacity: 0.5; }
+
+.input {
+  position: absolute;
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface-primary);
+  transition: all var(--motion-fast) var(--motion-easing);
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--grey-0);
+  transform: scale(0);
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.input:checked + .circle {
+  background: var(--fill-primary-default);
+  border-color: var(--fill-primary-default);
+}
+
+.input:checked + .circle .dot {
+  transform: scale(1);
+}
+
+.wrapper:hover:not(.disabled) .circle {
+  border-color: var(--fill-primary-default);
+}
+
+.input:focus-visible + .circle {
+  outline: 2px solid var(--violet-500);
+  outline-offset: 2px;
+}
+
+.label { user-select: none; }

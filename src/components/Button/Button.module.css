@@ -1,0 +1,184 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-8);
+  border: 1px solid transparent;
+  border-radius: var(--radius-8);
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease,
+    box-shadow 120ms ease, transform 50ms ease;
+  user-select: none;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0.5px);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.loading {
+  position: relative;
+}
+
+.spinner {
+  animation: df-spin 0.7s linear infinite;
+}
+
+@keyframes df-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============= Sizes ============= */
+
+.size-sm {
+  height: 30px;
+  padding: 0 var(--size-12);
+  font-size: 12px;
+  line-height: 1;
+  gap: var(--size-6);
+}
+.size-sm .icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.size-md {
+  height: 36px;
+  padding: 0 var(--size-16);
+  font-size: 14px;
+  line-height: 20px;
+  gap: var(--size-8);
+}
+.size-md .icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.size-lg {
+  height: 44px;
+  padding: 0 var(--size-20);
+  font-size: 16px;
+  line-height: 24px;
+  gap: var(--size-8);
+  border-radius: var(--radius-8);
+}
+.size-lg .icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============= Variant: Primary (brand violet, filled) ============= */
+
+.variant-primary {
+  background: var(--fill-primary-default);
+  color: var(--text-inverse);
+}
+.variant-primary:hover:not(:disabled) {
+  background: var(--fill-primary-hover);
+}
+.variant-primary:active:not(:disabled) {
+  background: var(--fill-primary-pressed);
+}
+.variant-primary:disabled {
+  background: var(--fill-secondary-disabled);
+  color: var(--text-disabled);
+}
+
+/* ============= Variant: Brand (gradient) ============= */
+
+.variant-brand {
+  background: var(--gradient-brand-default);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-xs);
+}
+.variant-brand:hover:not(:disabled) {
+  background: var(--fill-primary-hover);
+  box-shadow: var(--shadow-sm);
+}
+.variant-brand:active:not(:disabled) {
+  background: var(--fill-primary-pressed);
+  box-shadow: none;
+}
+.variant-brand:disabled {
+  background: var(--fill-secondary-disabled);
+  color: var(--text-disabled);
+  box-shadow: none;
+}
+
+/* ============= Variant: Secondary (filled grey + border) ============= */
+
+.variant-secondary {
+  background: var(--fill-secondary-default);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+.variant-secondary:hover:not(:disabled) {
+  background: var(--fill-secondary-hover);
+  border-color: var(--border-strong);
+}
+.variant-secondary:active:not(:disabled) {
+  background: var(--fill-secondary-pressed);
+}
+.variant-secondary:disabled {
+  background: var(--fill-secondary-disabled);
+  color: var(--text-disabled);
+  border-color: var(--border-disabled);
+}
+
+/* ============= Variant: Ghost (transparent) ============= */
+
+.variant-ghost {
+  background: transparent;
+  color: var(--text-primary);
+}
+.variant-ghost:hover:not(:disabled) {
+  background: var(--fill-secondary-hover);
+}
+.variant-ghost:active:not(:disabled) {
+  background: var(--fill-secondary-pressed);
+}
+.variant-ghost:disabled {
+  color: var(--text-disabled);
+}
+
+/* ============= Variant: Danger (orange) ============= */
+
+.variant-danger {
+  background: var(--fill-danger-default);
+  color: var(--text-inverse);
+}
+.variant-danger:hover:not(:disabled) {
+  background: var(--fill-danger-hover);
+}
+.variant-danger:active:not(:disabled) {
+  background: var(--fill-danger-pressed);
+}
+.variant-danger:disabled {
+  background: var(--fill-secondary-disabled);
+  color: var(--text-disabled);
+}

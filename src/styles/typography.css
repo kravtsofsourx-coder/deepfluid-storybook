@@ -1,0 +1,39 @@
+/* ============================================================
+ * Typography — Deepfluid DS uses Inter as primary
+ * ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+/* Display */
+.df-display-xl { font: 700 56px/1.15 var(--font-family-base); letter-spacing: -0.02em; }
+.df-display-lg { font: 700 44px/1.2  var(--font-family-base); letter-spacing: -0.02em; }
+
+/* Heading */
+.df-h1 { font: 700 32px/1.25 var(--font-family-base); letter-spacing: -0.01em; }
+.df-h2 { font: 700 24px/1.3  var(--font-family-base); letter-spacing: -0.01em; }
+.df-h3 { font: 600 20px/1.4  var(--font-family-base); }
+.df-h4 { font: 600 18px/1.4  var(--font-family-base); }
+
+/* Subheader */
+.df-subheader-lg { font: 600 16px/1.5 var(--font-family-base); }
+.df-subheader-md { font: 600 14px/1.5 var(--font-family-base); }
+
+/* Body */
+.df-body-lg { font: 400 16px/1.5 var(--font-family-base); }
+.df-body-md { font: 400 14px/1.5 var(--font-family-base); }
+
+/* Buttons */
+.df-button-sm { font: 500 12px/1 var(--font-family-base); }
+.df-button-md { font: 500 14px/20px var(--font-family-base); }
+.df-button-lg { font: 500 16px/24px var(--font-family-base); }
+
+/* Caption */
+.df-caption  { font: 400 12px/1.4 var(--font-family-base); }
+
+/* Code */
+.df-code { font: 400 13px/1.5 var(--font-family-mono); }

@@ -1,0 +1,249 @@
+/* ============================================================
+ * Deepfluid DS — Design Tokens
+ * Values mirror the Figma file iesgLX5Umk2UnH47KV01qc
+ * Light is default; switch via [data-theme="dark"] on <html>
+ * ============================================================ */
+
+:root {
+  /* ---------- Primitive palette ---------- */
+
+  /* Violet (brand) */
+  --violet-50:  #F5F2FF;
+  --violet-100: #E9E2FF;
+  --violet-200: #D2C4FF;
+  --violet-300: #B5A0F5;
+  --violet-400: #8E72E0;
+  --violet-500: #6340C8;
+  --violet-600: #4F30AB;
+  --violet-700: #3D248A;
+  --violet-800: #2B1A66;
+  --violet-900: #1A1042;
+
+  /* Teal (success) */
+  --teal-50:  #E8F8F2;
+  --teal-100: #C7EEDD;
+  --teal-200: #98DEC0;
+  --teal-300: #62C9A0;
+  --teal-400: #34B486;
+  --teal-500: #1D9E75;
+  --teal-600: #157E5C;
+  --teal-700: #0F6048;
+  --teal-800: #0A4233;
+  --teal-900: #062A20;
+
+  /* Orange (danger / warning) */
+  --orange-50:  #FEF1EC;
+  --orange-100: #FBDBCC;
+  --orange-200: #F6B49A;
+  --orange-300: #F08D6A;
+  --orange-400: #EA704A;
+  --orange-500: #E25830;
+  --orange-600: #B84320;
+  --orange-700: #8C3119;
+
+  /* Amber */
+  --amber-50:  #FFF8E6;
+  --amber-100: #FCEDB7;
+  --amber-200: #F8DC7A;
+  --amber-300: #F2C73D;
+  --amber-400: #DDAE16;
+  --amber-500: #B68D08;
+
+  /* Neutrals */
+  --grey-0:    #FFFFFF;
+  --grey-50:   #F7F7F8;
+  --grey-100:  #EDEEF0;
+  --grey-200:  #DCDEE2;
+  --grey-300:  #C2C5CC;
+  --grey-400:  #A1A5AE;
+  --grey-500:  #868B94;
+  --grey-600:  #5F6470;
+  --grey-700:  #3F434C;
+  --grey-800:  #24272D;
+  --grey-900:  #0E0F11;
+
+  /* ---------- Motion ---------- */
+  --motion-fast:    120ms;
+  --motion-medium:  240ms;
+  --motion-easing:  cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* ---------- Spacing (Size/N tokens) ---------- */
+  --size-0:  0px;
+  --size-2:  2px;
+  --size-4:  4px;
+  --size-6:  6px;
+  --size-8:  8px;
+  --size-12: 12px;
+  --size-16: 16px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-36: 36px;
+  --size-40: 40px;
+  --size-44: 44px;
+
+  /* ---------- Corner radius ---------- */
+  --radius-0:  0px;
+  --radius-4:  4px;
+  --radius-8:  8px;
+  --radius-12: 12px;
+  --radius-24: 24px;
+  --radius-full: 9999px;
+
+  /* ---------- Typography vars (referenced by component styles) ---------- */
+  --font-family-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-display-xl-size: 56px;       --text-display-xl-weight: 700;
+  --text-display-lg-size: 44px;       --text-display-lg-weight: 700;
+
+  --text-h1-size: 32px;               --text-h1-weight: 700;
+  --text-h2-size: 24px;               --text-h2-weight: 700;
+  --text-h3-size: 20px;               --text-h3-weight: 600;
+  --text-h4-size: 18px;               --text-h4-weight: 600;
+
+  --text-subheader-large-size: 16px;  --text-subheader-large-weight: 600;
+  --text-subheader-medium-size: 14px; --text-subheader-medium-weight: 600;
+
+  --text-body-large-size: 16px;       --text-body-large-weight: 400;
+  --text-body-medium-size: 14px;      --text-body-medium-weight: 400;
+
+  --text-button-sm-size: 12px;        --text-button-sm-weight: 500;
+  --text-button-md-size: 14px;        --text-button-md-weight: 500;
+  --text-button-lg-size: 16px;        --text-button-lg-weight: 500;
+
+  --text-caption-size: 12px;          --text-caption-weight: 400;
+
+  /* ---------- Shadow / Effects ---------- */
+  --shadow-xs: 0 1px 2px 0 rgba(14, 15, 17, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(14, 15, 17, 0.08), 0 1px 2px 0 rgba(14, 15, 17, 0.04);
+  --shadow-md: 0 4px 8px -2px rgba(14, 15, 17, 0.1), 0 2px 4px -2px rgba(14, 15, 17, 0.06);
+  --shadow-lg: 0 12px 16px -4px rgba(14, 15, 17, 0.08), 0 4px 6px -2px rgba(14, 15, 17, 0.03);
+
+  /* ============================================================
+   * Semantic tokens — LIGHT THEME (default)
+   * Use these in components, NEVER use primitives directly.
+   * ============================================================ */
+
+  /* Surface */
+  --surface-page:    #FFFFFF;
+  --surface-primary: #FFFFFF;
+
+  /* Text */
+  --text-primary:           var(--grey-900);
+  --text-secondary:         var(--grey-700);
+  --text-tertiary:          var(--grey-500);
+  --text-disabled:          var(--grey-400);
+  --text-inverse:           #FFFFFF;
+  --text-brand:             var(--violet-500);
+  --text-error:             var(--orange-500);
+  --text-success:           var(--teal-500);
+  --text-warning:           var(--amber-500);
+  --text-error-on-bg:       var(--orange-700);
+
+  /* Fill — primary (brand violet) */
+  --fill-primary-default:   var(--violet-500);
+  --fill-primary-hover:     var(--violet-600);
+  --fill-primary-pressed:   var(--violet-700);
+  --fill-primary-white:     #FFFFFF;
+  --fill-primary-black:     var(--grey-900);
+
+  /* Fill — secondary */
+  --fill-secondary-default:        var(--grey-100);
+  --fill-secondary-hover:          var(--grey-200);
+  --fill-secondary-pressed:        var(--grey-300);
+  --fill-secondary-disabled:       var(--grey-50);
+  --fill-secondary-icons:          var(--grey-500);
+  --fill-secondary-icons-2:        var(--grey-400);
+  --fill-secondary-hover-grey:     var(--grey-200);
+  --fill-secondary-hover-white:    var(--grey-50);
+  --fill-secondary-pressed-grey:   var(--grey-300);
+
+  /* Fill — danger / warning / success */
+  --fill-danger-default:    var(--orange-500);
+  --fill-danger-hover:      var(--orange-600);
+  --fill-danger-pressed:    var(--orange-700);
+  --fill-danger-background: var(--orange-50);
+
+  --fill-warning-default:    var(--amber-500);
+  --fill-warning-background: var(--amber-50);
+  --fill-warning-icon:       var(--amber-400);
+
+  --fill-success: var(--teal-500);
+
+  --fill-background: var(--grey-50);
+  --fill-icon:       var(--grey-600);
+
+  /* Border */
+  --border-subtle:   rgba(14, 15, 17, 0.08);
+  --border-default:  rgba(14, 15, 17, 0.16);
+  --border-strong:   rgba(14, 15, 17, 0.22);
+  --border-disabled: rgba(14, 15, 17, 0.06);
+
+  --border-brand:           var(--violet-500);
+  --border-brand-secondary: var(--violet-300);
+  --border-brand-tertiary:  var(--violet-100);
+
+  --border-success-default:   var(--teal-500);
+  --border-success-secondary: var(--teal-300);
+  --border-success-tertiary:  var(--teal-100);
+
+  --border-warning-default:   var(--amber-500);
+  --border-warning-secondary: var(--amber-300);
+  --border-warning-tertiary:  var(--amber-100);
+
+  --border-error-default:   var(--orange-500);
+  --border-error-secondary: var(--orange-300);
+  --border-error-tertiary:  var(--orange-100);
+
+  /* Brand gradient */
+  --gradient-brand-default: linear-gradient(135deg, var(--violet-500) 0%, var(--violet-700) 100%);
+}
+
+/* ============================================================
+ * DARK THEME
+ * ============================================================ */
+[data-theme='dark'] {
+  --surface-page:    #0E0F11;
+  --surface-primary: #1A1C20;
+
+  --text-primary:    #F0F0F0;
+  --text-secondary:  var(--grey-300);
+  --text-tertiary:   var(--grey-400);
+  --text-disabled:   var(--grey-600);
+  --text-inverse:    var(--grey-900);
+  --text-brand:      var(--violet-300);
+  --text-error:      var(--orange-300);
+  --text-success:    var(--teal-300);
+  --text-warning:    var(--amber-300);
+
+  --fill-primary-default: var(--violet-500);
+  --fill-primary-hover:   var(--violet-400);
+  --fill-primary-pressed: var(--violet-300);
+
+  --fill-secondary-default:        var(--grey-800);
+  --fill-secondary-hover:          var(--grey-700);
+  --fill-secondary-pressed:        var(--grey-600);
+  --fill-secondary-disabled:       rgba(255, 255, 255, 0.04);
+  --fill-secondary-icons:          var(--grey-400);
+  --fill-secondary-icons-2:        var(--grey-500);
+  --fill-secondary-hover-grey:     var(--grey-700);
+  --fill-secondary-hover-white:    var(--grey-800);
+  --fill-secondary-pressed-grey:   var(--grey-600);
+
+  --fill-danger-background: rgba(226, 88, 48, 0.15);
+  --fill-warning-background: rgba(182, 141, 8, 0.15);
+
+  --fill-background: var(--grey-800);
+  --fill-icon:       var(--grey-400);
+
+  --border-subtle:   rgba(255, 255, 255, 0.08);
+  --border-default:  rgba(255, 255, 255, 0.16);
+  --border-strong:   rgba(255, 255, 255, 0.22);
+  --border-disabled: rgba(255, 255, 255, 0.06);
+
+  --border-brand-tertiary:   rgba(99, 64, 200, 0.30);
+  --border-success-tertiary: rgba(29, 158, 117, 0.30);
+  --border-warning-tertiary: rgba(182, 141, 8, 0.30);
+  --border-error-tertiary:   rgba(226, 88, 48, 0.30);
+}
